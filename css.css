@@ -39,6 +39,7 @@ header .logo img {
 
 .hero h2 {
     color: rgb(183, 11, 11);
+    text-align: center;
 }
 
 .hero p {
@@ -106,24 +107,15 @@ footer {
     margin-right: 10px;
 }
 
-.galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.fila {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.imagen {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.video-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+      color: rgb(183, 11, 11);
 }

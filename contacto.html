@@ -37,8 +37,46 @@
         </div>
     </header>
 
-    <!-- Contenido centrado -->
-    <main class="container text-center">
+    <!-- Formulario de contacto -->
+    <div class="container my-5">
+        <h2 class="text-center">Formulario de Contacto</h2>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="col-md-6">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" required>
+            </div>
+            <div class="col-12">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="confirmarEmail" class="form-label">Confirmar correo electrónico</label>
+                <input type="email" class="form-control" id="confirmarEmail" required>
+            </div>
+            <div class="col-md-6">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" required>
+            </div>
+            <div class="col-12">
+                <label for="comentarios" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="comentarios" rows="4" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-primary mt-3" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Información de contacto -->
+    <main class="container text-center my-5">
         <h1>Contacto</h1>
 
         <h3><i class="fas fa-phone"></i> Teléfono</h3>
@@ -59,6 +97,23 @@
             @westfieldparquesur
         </a>
     </main>
+
+    <!-- Validación del formulario (opcional con Bootstrap 5) -->
+    <script>
+        (() => {
+            'use strict';
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
 </body>
 </html>
 

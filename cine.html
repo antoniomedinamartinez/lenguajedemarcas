@@ -39,111 +39,107 @@
    
     <div class="contenedor">
         <section class="hero">
-            <h2>Cartelera de Cinesa</h2>
-      <p>Descubre las películas en cartelera en el cine de ParqueSur. Haz clic sobre el póster para más información y compra de entradas.</p>
-    </section>
+            <section class="hero">
+  <h2>¡Conoce Parquesur!</h2>
+  <p>Westfield Parquesur es uno de los centros comerciales más grandes y emblemáticos de la Comunidad de Madrid, situado en Leganés, a tan solo 7 kilómetros del centro de la capital. Inaugurado en 1989, cuenta con una superficie de 151.200 m² y alberga más de 230 establecimientos.</p>
 
-    <section class="movie-grid">
-      <div class="movie" onclick="openModal(0)">
-        <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Dune_Part_Two_poster.jpg" alt="Dune 2" />
-      </div>
-      <div class="movie" onclick="openModal(1)">
-        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Godzilla_x_Kong_The_New_Empire_poster.jpg" alt="Godzilla x Kong" />
-      </div>
-      <div class="movie" onclick="openModal(2)">
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Deadpool_%26_Wolverine_poster.jpg" alt="Deadpool & Wolverine" />
-      </div>
-      <div class="movie" onclick="openModal(3)">
-        <img src="https://upload.wikimedia.org/wikipedia/en/5/57/Migration_2023_film_poster.jpg" alt="Migration" />
-      </div>
-      <div class="movie" onclick="openModal(4)">
-        <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Inside_Out_2_poster.jpg" alt="Inside Out 2" />
-      </div>
-      <div class="movie" onclick="openModal(5)">
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Furiosa_poster.jpg" alt="Furiosa" />
-      </div>
-        </section>
+  <hr class="my-4">
+
+  <h2>Cartelera de Cinesa</h2>
+  <p>Descubre las películas en cartelera en el cine de ParqueSur. Haz clic sobre el póster para ver más detalles.</p>
+
+  <div class="movie-grid">
+    <div class="movie" onclick="openModal(0)">
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Dune_Part_Two_poster.jpg" alt="Dune 2" />
     </div>
-
-
-  <div id="movieModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img id="modalImage" src="" alt="Movie Poster" />
-      <h2 id="modalTitle"></h2>
-      <p id="modalDescription"></p>
-      <a id="modalLink" href="#" target="_blank" class="btn btn-primary">Ver en Cinesa</a>
+    <div class="movie" onclick="openModal(1)">
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Godzilla_x_Kong_The_New_Empire_poster.jpg" alt="Godzilla x Kong" />
+    </div>
+    <div class="movie" onclick="openModal(2)">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Deadpool_%26_Wolverine_poster.jpg" alt="Deadpool & Wolverine" />
+    </div>
+    <div class="movie" onclick="openModal(3)">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/57/Migration_2023_film_poster.jpg" alt="Migration" />
+    </div>
+    <div class="movie" onclick="openModal(4)">
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Inside_Out_2_poster.jpg" alt="Inside Out 2" />
+    </div>
+    <div class="movie" onclick="openModal(5)">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Furiosa_poster.jpg" alt="Furiosa" />
     </div>
   </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Westfield ParqueSur. Todos los derechos reservados.</p>
-    <div class="footer-links">
-      <a href="https://www.westfield.com/es/spain/parquesur" target="_blank">
-        <img src="/fotos/logowf.png" alt="Logo westfield" />
-      </a>
-    </div>
-  </footer>
+<!-- Modal -->
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Movie Poster" />
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <a id="modalLink" href="#" target="_blank" class="btn btn-primary mt-3">Ver en Cinesa</a>
+  </div>
+</div>
 
-  <script>
-    const movies = [
-      {
-        title: "Dune: Parte Dos",
-        image: "https://upload.wikimedia.org/wikipedia/en/7/7e/Dune_Part_Two_poster.jpg",
-        description: "Paul Atreides une fuerzas con los Fremen para vengar a su familia y evitar el destino profético de convertirse en un tirano.",
-        link: "https://www.cinesa.es/Peliculas/dune-parte-dos"
-      },
-      {
-        title: "Godzilla x Kong: The New Empire",
-        image: "https://upload.wikimedia.org/wikipedia/en/f/f9/Godzilla_x_Kong_The_New_Empire_poster.jpg",
-        description: "Los titanes se enfrentan a una amenaza colosal que emerge del interior de la Tierra.",
-        link: "https://www.cinesa.es/Peliculas/godzilla-x-kong-the-new-empire"
-      },
-      {
-        title: "Deadpool & Wolverine",
-        image: "https://upload.wikimedia.org/wikipedia/en/d/db/Deadpool_%26_Wolverine_poster.jpg",
-        description: "Deadpool vuelve... y no viene solo. Junto a Wolverine, forman un equipo explosivo del universo Marvel.",
-        link: "https://www.cinesa.es/Peliculas/deadpool-wolverine"
-      },
-      {
-        title: "Migration: Un Viaje Patoso",
-        image: "https://upload.wikimedia.org/wikipedia/en/5/57/Migration_2023_film_poster.jpg",
-        description: "Una familia de patos sale de su estanque en busca de aventuras más allá del hogar.",
-        link: "https://www.cinesa.es/Peliculas/migration"
-      },
-      {
-        title: "Inside Out 2",
-        image: "https://upload.wikimedia.org/wikipedia/en/1/1f/Inside_Out_2_poster.jpg",
-        description: "Alegría, Tristeza, Ira y compañía regresan... y hay nuevas emociones en la mente de Riley adolescente.",
-        link: "https://www.cinesa.es/Peliculas/inside-out-2"
-      },
-      {
-        title: "Furiosa: A Mad Max Saga",
-        image: "https://upload.wikimedia.org/wikipedia/en/d/d1/Furiosa_poster.jpg",
-        description: "La historia del origen de Furiosa, antes de los acontecimientos de Mad Max: Fury Road.",
-        link: "https://www.cinesa.es/Peliculas/furiosa"
-      }
-    ];
-
-    function openModal(index) {
-      document.getElementById("modalImage").src = movies[index].image;
-      document.getElementById("modalTitle").textContent = movies[index].title;
-      document.getElementById("modalDescription").textContent = movies[index].description;
-      document.getElementById("modalLink").href = movies[index].link;
-      document.getElementById("movieModal").style.display = "block";
+<script>
+  const movies = [
+    {
+      title: "Dune: Parte Dos",
+      image: "https://upload.wikimedia.org/wikipedia/en/7/7e/Dune_Part_Two_poster.jpg",
+      description: "Paul Atreides une fuerzas con los Fremen para vengar a su familia y evitar el destino profético de convertirse en un tirano.",
+      link: "https://www.cinesa.es/Peliculas/dune-parte-dos"
+    },
+    {
+      title: "Godzilla x Kong: The New Empire",
+      image: "https://upload.wikimedia.org/wikipedia/en/f/f9/Godzilla_x_Kong_The_New_Empire_poster.jpg",
+      description: "Los titanes se enfrentan a una amenaza colosal que emerge del interior de la Tierra.",
+      link: "https://www.cinesa.es/Peliculas/godzilla-x-kong-the-new-empire"
+    },
+    {
+      title: "Deadpool & Wolverine",
+      image: "https://upload.wikimedia.org/wikipedia/en/d/db/Deadpool_%26_Wolverine_poster.jpg",
+      description: "Deadpool vuelve... y no viene solo. Junto a Wolverine, forman un equipo explosivo del universo Marvel.",
+      link: "https://www.cinesa.es/Peliculas/deadpool-wolverine"
+    },
+    {
+      title: "Migration: Un Viaje Patoso",
+      image: "https://upload.wikimedia.org/wikipedia/en/5/57/Migration_2023_film_poster.jpg",
+      description: "Una familia de patos sale de su estanque en busca de aventuras más allá del hogar.",
+      link: "https://www.cinesa.es/Peliculas/migration"
+    },
+    {
+      title: "Inside Out 2",
+      image: "https://upload.wikimedia.org/wikipedia/en/1/1f/Inside_Out_2_poster.jpg",
+      description: "Alegría, Tristeza, Ira y compañía regresan... y hay nuevas emociones en la mente de Riley adolescente.",
+      link: "https://www.cinesa.es/Peliculas/inside-out-2"
+    },
+    {
+      title: "Furiosa: A Mad Max Saga",
+      image: "https://upload.wikimedia.org/wikipedia/en/d/d1/Furiosa_poster.jpg",
+      description: "La historia del origen de Furiosa, antes de los acontecimientos de Mad Max: Fury Road.",
+      link: "https://www.cinesa.es/Peliculas/furiosa"
     }
+  ];
 
-    function closeModal() {
-      document.getElementById("movieModal").style.display = "none";
+  function openModal(index) {
+    document.getElementById("modalImage").src = movies[index].image;
+    document.getElementById("modalTitle").textContent = movies[index].title;
+    document.getElementById("modalDescription").textContent = movies[index].description;
+    document.getElementById("modalLink").href = movies[index].link;
+    document.getElementById("movieModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("movieModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("movieModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById("movieModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
+  };
+</script>
     
 
 

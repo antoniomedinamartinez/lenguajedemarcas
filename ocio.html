@@ -15,17 +15,15 @@
                 <img src="/fotos/logops.png" alt="Logo Parquesur" height="50" class="me-2">
                 <span>Página informativa de ParqueSur</span>
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <nav class="collapse navbar-collapse" id="menuNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="cine.html">Cine</a></li>
                     <li class="nav-item"><a class="nav-link" href="restaurantes.html">Restaurantes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ocio.html">Ocio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="ocio.html">Ocio</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="visitanos.html">Visítanos</a></li>
                     <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
@@ -38,39 +36,83 @@
     <main class="container mt-4">
         <h1>Ocio</h1>
 
-        <!-- Sección del video -->
-        <h2>Babylon Park</h2>
-        <p>Babylon Park es un parque temático de interior que cuenta con 110 máquinas de arcade y 6 atracciones como montaña rusa, lanzadera o coches de choque.</p>
-        <p>¡La diversión está asegurada en este destino de ocio para todas las edades!</p>
-        <div class="text-center mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/CbAih-0n46g" 
-                title="Babylon Park" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <!-- Galería de imágenes en formato 2 arriba, 1 abajo -->
-        <div class="galeria">
-            <div class="fila">
-                <div>
-                    <h3>Gimnasio</h3>
-                    <p>Paidesport Center es una marca lider dedicadaa la gestión de centros de actividades físico-deportivas y de bienestar.</p>
-                    <p>La instalación cuenta con 2.400m2 , distribuidos en una Sala Fitness, más de 40 puestos de cardio, 32 maquinas de tonificación, y 170m2 destinados a peso libre, piscina polivalente de 20 metros, piscina adicional de nado libre, sauna, baño turco, jacuzzi, sala de entrenamiento personal para entrenos guiados, sala de ciclo indoor con 70 bicicletas y 2 salas de actividades dirigidas con capacidad para más de 100 personas.</p>
-                    <img class="imagen" src="/lenguajedemarcas/planetfitness.jpg" alt="Gimnasio">
-                </div>
+        <!-- Logos clicables -->
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <img src="/fotos/babylon_logo.png" alt="Babylon Park" class="img-fluid" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalBabylon">
+                <p>Babylon Park</p>
             </div>
-            <div class="fila">
-                <div>
-                    <h3>Bolera</h3>
-                    <p>Tanto si te gusta el bowling o si prefieres disfrutar de una partida de billar o simplemente tomar una copa en un ambiente sano, disfrútalo en Bowling Sur. Bolera, áreas recreativas, salones de billar y zonas de juegos electrónicos. Bar provisto de pantallas para seguir las partidas.</p>
-                    <p><strong>HORARIO DE APERTURA:</strong></p>
-                    <p>Lunes a viernes: 15:00h a 01:00h</p>
-                    <p>Sábado y domingo: 12:00h a 01:00h</p>
-                    <img class="imagen" src="/lenguajedemarcas/bolera.jpg" alt="bolera">
-                </div>
+            <div class="col-md-4 mb-3">
+                <img src="/fotos/bolera_logo.png" alt="Bolera" class="img-fluid" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalBolera">
+                <p>Bolera</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="/fotos/gimnasio_logo.png" alt="Gimnasio" class="img-fluid" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modalGimnasio">
+                <p>Gimnasio</p>
             </div>
         </div>
     </main>
+
+    <!-- MODAL BABYLON -->
+    <div class="modal fade" id="modalBabylon" tabindex="-1" aria-labelledby="modalBabylonLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Babylon Park</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="w-100" height="315" src="https://www.youtube.com/embed/CbAih-0n46g" frameborder="0" allowfullscreen></iframe>
+                    <p class="mt-3">
+                        Babylon Park es un parque temático de interior que cuenta con 110 máquinas de arcade y 6 atracciones como montaña rusa, lanzadera o coches de choque.
+                        ¡La diversión está asegurada en este destino de ocio para todas las edades!
+                    </p>
+                    <a href="https://www.babylonpark.com/" target="_blank">Visitar web oficial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL BOLERA -->
+    <div class="modal fade" id="modalBolera" tabindex="-1" aria-labelledby="modalBoleraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bolera Bowling Sur</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="w-100" height="315" src="https://www.youtube.com/embed/xGoTeyECpsw" frameborder="0" allowfullscreen></iframe>
+                    <p class="mt-3">
+                        Tanto si te gusta el bowling o si prefieres disfrutar de una partida de billar o simplemente tomar una copa en un ambiente sano, disfrútalo en Bowling Sur. 
+                        Bolera, áreas recreativas, salones de billar y zonas de juegos electrónicos. Bar provisto de pantallas para seguir las partidas.
+                    </p>
+                    <p><strong>Horario:</strong><br>
+                    Lunes a viernes: 15:00h a 01:00h<br>
+                    Sábado y domingo: 12:00h a 01:00h</p>
+                    <a href="https://www.bowlingsur.es/" target="_blank">Visitar web oficial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL GIMNASIO -->
+    <div class="modal fade" id="modalGimnasio" tabindex="-1" aria-labelledby="modalGimnasioLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gimnasio Paidesport Center</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe class="w-100" height="315" src="https://www.youtube.com/embed/OLJt5gaOIfI" frameborder="0" allowfullscreen></iframe>
+                    <p class="mt-3">
+                        Paidesport Center es una marca líder en gestión de centros de actividades físico-deportivas. Cuenta con 2400 m² que incluyen salas fitness, piscinas, sauna, baño turco, sala de ciclo indoor, zonas de entrenamiento funcional y mucho más.
+                    </p>
+                    <a href="https://paidesportcenter.com/" target="_blank">Visitar web oficial</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

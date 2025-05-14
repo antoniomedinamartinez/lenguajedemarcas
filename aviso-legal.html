@@ -1,107 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Cinesa - Cartelera</title>
- 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Aviso Legal - ParqueSur</title>
+    
+    <link rel="stylesheet" href="css.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #7c838b;">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="inicio.html">
+          <img src="/fotos/logops.png" alt="Logo Parquesur" height="50" class="me-2">
+          <span>Página informativa de ParqueSur</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="cine.html">Cine</a></li>
+            <li class="nav-item"><a class="nav-link" href="restaurantes.html">Restaurantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="ocio.html">Ocio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="visitanos.html">Visítanos</a></li>
+            <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
+            <li class="nav-item"><a class="nav-link active" href="aviso-legal.html">Aviso Legal</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header>
-  <h1>Cinesa - Cartelera Actual</h1>
-</header>
+    <main class="container my-5">
+        <div class="border rounded p-4 bg-light">
+            <h1 class="mb-4">Aviso Legal</h1>
 
-<section class="movie-grid">
-  <div class="movie" onclick="openModal(0)">
-    <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Dune_Part_Two_poster.jpg" alt="Dune 2">
-  </div>
-  <div class="movie" onclick="openModal(1)">
-    <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Godzilla_x_Kong_The_New_Empire_poster.jpg" alt="Godzilla x Kong">
-  </div>
-  <div class="movie" onclick="openModal(2)">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/db/Deadpool_%26_Wolverine_poster.jpg" alt="Deadpool & Wolverine">
-  </div>
-  <div class="movie" onclick="openModal(3)">
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/57/Migration_2023_film_poster.jpg" alt="Migration">
-  </div>
-  <div class="movie" onclick="openModal(4)">
-    <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Inside_Out_2_poster.jpg" alt="Inside Out 2">
-  </div>
-  <div class="movie" onclick="openModal(5)">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Furiosa_poster.jpg" alt="Furiosa">
-  </div>
-</section>
+            <p><strong>1. Información General</strong></p>
+            <p>En cumplimiento con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se informa que el presente sitio web es propiedad de la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR, con domicilio en Avenida de Gran Bretaña s/n, 28916 Leganés (Madrid), y con CIF número [CIF correspondiente].</p>
 
-<!-- Modal -->
-<div id="movieModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="" alt="Movie Poster">
-    <h2 id="modalTitle"></h2>
-    <p id="modalDescription"></p>
-    <a id="modalLink" href="#" target="_blank">Ver en Cinesa</a>
-  </div>
-</div>
+            <p><strong>2. Condiciones de Uso</strong></p>
+            <p>El acceso y uso de este sitio web atribuye la condición de usuario, quien acepta, desde dicho acceso y uso, las condiciones aquí reflejadas.</p>
 
-<script>
-  const movies = [
-    {
-      title: "Dune: Parte Dos",
-      image: "https://upload.wikimedia.org/wikipedia/en/7/7e/Dune_Part_Two_poster.jpg",
-      description: "Paul Atreides une fuerzas con los Fremen para vengar a su familia y evitar el destino profético de convertirse en un tirano.",
-      link: "https://www.cinesa.es/Peliculas/dune-parte-dos"
-    },
-    {
-      title: "Godzilla x Kong: The New Empire",
-      image: "https://upload.wikimedia.org/wikipedia/en/f/f9/Godzilla_x_Kong_The_New_Empire_poster.jpg",
-      description: "Los titanes se enfrentan a una amenaza colosal que emerge del interior de la Tierra.",
-      link: "https://www.cinesa.es/Peliculas/godzilla-x-kong-the-new-empire"
-    },
-    {
-      title: "Deadpool & Wolverine",
-      image: "https://upload.wikimedia.org/wikipedia/en/d/db/Deadpool_%26_Wolverine_poster.jpg",
-      description: "Deadpool vuelve... y no viene solo. Junto a Wolverine, forman un equipo explosivo del universo Marvel.",
-      link: "https://www.cinesa.es/Peliculas/deadpool-wolverine"
-    },
-    {
-      title: "Migration: Un Viaje Patoso",
-      image: "https://upload.wikimedia.org/wikipedia/en/5/57/Migration_2023_film_poster.jpg",
-      description: "Una familia de patos sale de su estanque en busca de aventuras más allá del hogar.",
-      link: "https://www.cinesa.es/Peliculas/migration"
-    },
-    {
-      title: "Inside Out 2",
-      image: "https://upload.wikimedia.org/wikipedia/en/1/1f/Inside_Out_2_poster.jpg",
-      description: "Alegría, Tristeza, Ira y compañía regresan... y hay nuevas emociones en la mente de Riley adolescente.",
-      link: "https://www.cinesa.es/Peliculas/inside-out-2"
-    },
-    {
-      title: "Furiosa: A Mad Max Saga",
-      image: "https://upload.wikimedia.org/wikipedia/en/d/d1/Furiosa_poster.jpg",
-      description: "La historia del origen de Furiosa, antes de los acontecimientos de Mad Max: Fury Road.",
-      link: "https://www.cinesa.es/Peliculas/furiosa"
-    }
-  ];
+            <p><strong>3. Propiedad Intelectual e Industrial</strong></p>
+            <p>Todos los contenidos del sitio web, incluyendo, sin carácter limitativo, textos, documentos, fotografías, dibujos, representaciones gráficas, bases de datos, programas informáticos, así como logotipos, marcas, nombres comerciales u otros signos distintivos, son propiedad de la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR o de terceros que han autorizado su uso.</p>
 
-  function openModal(index) {
-    document.getElementById("modalImage").src = movies[index].image;
-    document.getElementById("modalTitle").textContent = movies[index].title;
-    document.getElementById("modalDescription").textContent = movies[index].description;
-    document.getElementById("modalLink").href = movies[index].link;
-    document.getElementById("movieModal").style.display = "block";
-  }
+            <p><strong>4. Protección de Datos Personales</strong></p>
+            <p>La recogida y tratamiento de los datos personales suministrados por el usuario se realiza conforme a lo establecido en la Política de Privacidad del sitio web.</p>
 
-  function closeModal() {
-    document.getElementById("movieModal").style.display = "none";
-  }
+            <p><strong>5. Enlaces a Terceros</strong></p>
+            <p>En el caso de que en el sitio web se dispusiesen enlaces o hipervínculos hacia otros sitios de Internet, la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR no ejercerá ningún tipo de control sobre dichos sitios y contenidos.</p>
 
-  window.onclick = function(event) {
-    const modal = document.getElementById("movieModal");
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
+            <p><strong>6. Modificaciones</strong></p>
+            <p>La COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su sitio web.</p>
 
+            <p><strong>7. Legislación Aplicable y Jurisdicción</strong></p>
+            <p>La relación entre la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR y el usuario se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Madrid.</p>
+        </div>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Westfield ParqueSur. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="https://www.westfield.com/es/spain/parquesur" target="_blank">
+                <img src="/fotos/logowf.png" alt="Logo westfield">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

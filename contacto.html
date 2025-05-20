@@ -40,7 +40,7 @@
     <!-- Formulario de contacto -->
     <div class="container my-5">
         <h2 class="text-center">Formulario de Contacto</h2>
-        <form class="row g-3 needs-validation" novalidate>
+        <form id="formularioContacto" class="row g-3 needs-validation" novalidate>
             <div class="col-md-6">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" required>
@@ -56,10 +56,12 @@
             <div class="col-md-6">
                 <label for="email" class="form-label">Correo electrónico</label>
                 <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Introduce un correo válido.</div>
             </div>
             <div class="col-md-6">
                 <label for="confirmarEmail" class="form-label">Confirmar correo electrónico</label>
                 <input type="email" class="form-control" id="confirmarEmail" required>
+                <div class="invalid-feedback">Los correos deben coincidir.</div>
             </div>
             <div class="col-md-6">
                 <label for="telefono" class="form-label">Teléfono</label>
@@ -98,7 +100,7 @@
         </a>
     </main>
 
-    <!-- Validación del formulario (opcional con Bootstrap 5) -->
+    <!-- Validación de Bootstrap -->
     <script>
         (() => {
             'use strict';
@@ -114,6 +116,26 @@
             });
         })();
     </script>
+
+    <!-- Validación de coincidencia de correos -->
+    <script>
+        document.getElementById("formularioContacto").addEventListener("submit", function(event) {
+            const email = document.getElementById("email");
+            const confirmarEmail = document.getElementById("confirmarEmail");
+
+            if (email.value.trim() !== confirmarEmail.value.trim()) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                email.classList.add("is-invalid");
+                confirmarEmail.classList.add("is-invalid");
+
+                confirmarEmail.nextElementSibling.textContent = "Los correos deben coincidir.";
+            } else {
+                email.classList.remove("is-invalid");
+                confirmarEmail.classList.remove("is-invalid");
+            }
+        });
+    </script>
 </body>
 </html>
-

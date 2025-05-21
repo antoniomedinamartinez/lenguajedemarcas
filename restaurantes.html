@@ -3,66 +3,142 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Aviso Legal - ParqueSur</title>
+    <title>ParqueSur - Restaurantes</title>
     
     <link rel="stylesheet" href="css.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #7c838b;">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="inicio.html">
-          <img src="/fotos/logops.png" alt="Logo Parquesur" height="50" class="me-2">
-          <span>Página informativa de ParqueSur</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <nav class="collapse navbar-collapse" id="menuNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="cine.html">Cine</a></li>
-            <li class="nav-item"><a class="nav-link" href="restaurantes.html">Restaurantes</a></li>
-            <li class="nav-item"><a class="nav-link" href="ocio.html">Ocio</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-            <li class="nav-item"><a class="nav-link" href="visitanos.html">Visítanos</a></li>
-            <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
-            <li class="nav-item"><a class="nav-link active" href="aviso-legal.html">Aviso Legal</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    
+<header class="navbar navbar-expand-lg navbar-dark" style="background-color: #7c838b;">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="inicio.html">
+      <img src="/fotos/logops.png" alt="Logo Parquesur" height="50" class="me-2">
+      <span>Página informativa de ParqueSur</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="collapse navbar-collapse" id="menuNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="cine.html">Cine</a></li>
+        <li class="nav-item"><a class="nav-link active" href="restaurantes.html">Restaurantes</a></li>
+        <li class="nav-item"><a class="nav-link" href="ocio.html">Ocio</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="visitanos.html">Visítanos</a></li>
+        <li class="nav-item"><a class="nav-link" href="tiendas.html">Tiendas</a></li>
+        <li class="nav-item"><a class="nav-link" href="aviso-legal.html">Aviso Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+   
+<main class="container mt-4">
+    <h2 class="text-center mb-4">Restaurantes en ParqueSur</h2>
+   <section class="restaurant-grid container">
+  <div class="row mb-4">
+    <div class="col-md-4 restaurant" onclick="openModal(0)">
+      <img src="fotos/mcdonalds.webp" alt="McDonald's" class="img-fluid">
+    </div>
+    <div class="col-md-4 restaurant" onclick="openModal(1)">
+      <img src="fotos/burgerking.png" alt="Burger King" class="img-fluid">
+    </div>
+    <div class="col-md-4 restaurant" onclick="openModal(2)">
+      <img src="/fotos/subway.png" alt="Subway" class="img-fluid">
+    </div>
+  </div>
 
-    <main class="container my-5">
-        <div class="border rounded p-4 bg-light">
-            <h1 class="mb-4">Aviso Legal</h1>
+  <div class="row">
+    <div class="col-md-4 restaurant" onclick="openModal(3)">
+      <img src="fotos/kfc.png" alt="KFC" class="img-fluid">
+    </div>
+    <div class="col-md-4 restaurant" onclick="openModal(4)">
+      <img src="fotos/pizzahut.png" alt="Pizza Hut" class="img-fluid">
+    </div>
+    <div class="col-md-4 restaurant" onclick="openModal(5)">
+      <img src="/fotos/tacobell.svg" alt="Taco Bell" class="img-fluid">
+    </div>
+  </div>
+</section>
 
-            <p><strong>1. Información General</strong></p>
-            <p>En cumplimiento con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se informa que el presente sitio web es propiedad de la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR, con domicilio en Avenida de Gran Bretaña s/n, 28916 Leganés (Madrid), y con CIF número [CIF correspondiente].</p>
+</main>
 
-            <p><strong>2. Condiciones de Uso</strong></p>
-            <p>El acceso y uso de este sitio web atribuye la condición de usuario, quien acepta, desde dicho acceso y uso, las condiciones aquí reflejadas.</p>
+<div id="restaurantModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Restaurant Image" class="img-fluid mb-3">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <a id="modalLink" href="#" target="_blank" class="btn btn-primary mt-2">Visitar sitio web</a>
+  </div>
+</div>
 
-            <p><strong>3. Propiedad Intelectual e Industrial</strong></p>
-            <p>Todos los contenidos del sitio web, incluyendo, sin carácter limitativo, textos, documentos, fotografías, dibujos, representaciones gráficas, bases de datos, programas informáticos, así como logotipos, marcas, nombres comerciales u otros signos distintivos, son propiedad de la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR o de terceros que han autorizado su uso.</p>
+<script>
+  const data = [
+    {
+      title: "McDonald's",
+      image: "fotos/mcdonaldsinterior.jpg",
+      description: "McDonald's es una de las cadenas de comida rápida más grandes del mundo, conocida por sus hamburguesas, patatas fritas y McFlurry.",
+      link: "https://comodebigestuamor.es/?gad_source=1&gad_campaignid=22540006237&gbraid=0AAAAADvaTCz0X5UL6Ecno00WheJ9UTM7l&gclid=CjwKCAjw_pDBBhBMEiwAmY02NtH6pphcNOJfvNx9Gl_rjFDLBX57xGcrUclm-B-0oRvzL1RRQf7RxxoCijoQAvD_BwE&gclsrc=aw.ds"
+    },
+    {
+      title: "Burger King",
+      image: "fotos/burgerkinginterior.png",
+      description: "Burger King ofrece hamburguesas flameadas al estilo parrilla, Whoppers y variedad de menús para todos los gustos.",
+      link: "https://www.burgerking.es/es/"
+    },
+    {
+      title: "Subway",
+      image: "/fotos/subwayinterior.jpg",
+      description: "Subway es famosa por sus bocadillos personalizables hechos al momento, con opciones frescas y saludables.",
+      link: "https://www.subway.com/en-us"
+    },
+    {
+      title: "KFC",
+      image: "fotos/kfcinterior.jpg",
+      description: "KFC es especialista en pollo frito con su receta secreta de 11 hierbas y especias.",
+      link: "https://www.kfc.es/"
+    },
+    {
+      title: "Pizza Hut",
+      image: "fotos/pizzahutinterior.jpg",
+      description: "fotos/pizzahut.png",
+      link: "https://www.pizzahut.es/"
+    },
+    {
+      title: "Taco Bell",
+      image: "/fotos/tacobellinterior.jpg",
+      description: "Taco Bell sirve comida rápida de inspiración mexicana, como tacos, burritos y quesadillas.",
+      link: "https://tacobell.es/es/inicio"
+    }
+  ];
 
-            <p><strong>4. Protección de Datos Personales</strong></p>
-            <p>La recogida y tratamiento de los datos personales suministrados por el usuario se realiza conforme a lo establecido en la Política de Privacidad del sitio web.</p>
+  function openModal(index) {
+    const modal = document.getElementById("restaurantModal");
+    document.getElementById("modalImage").src = data[index].image;
+    document.getElementById("modalTitle").textContent = data[index].title;
+    document.getElementById("modalDescription").textContent = data[index].description;
+    document.getElementById("modalLink").href = data[index].link;
+    modal.style.display = "block";
+  }
 
-            <p><strong>5. Enlaces a Terceros</strong></p>
-            <p>En el caso de que en el sitio web se dispusiesen enlaces o hipervínculos hacia otros sitios de Internet, la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR no ejercerá ningún tipo de control sobre dichos sitios y contenidos.</p>
+  function closeModal() {
+    document.getElementById("restaurantModal").style.display = "none";
+  }
 
-            <p><strong>6. Modificaciones</strong></p>
-            <p>La COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su sitio web.</p>
+  window.onclick = function(event) {
+    const modal = document.getElementById("restaurantModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
-            <p><strong>7. Legislación Aplicable y Jurisdicción</strong></p>
-            <p>La relación entre la COMUNIDAD DE PROPIETARIOS DEL CENTRO COMERCIAL WESTFIELD PARQUESUR y el usuario se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Madrid.</p>
-        </div>
-    </main>
-
-    <footer>
+ <footer>
         <p>Página oficial</p>
         
         <div class="footer-links">
@@ -72,5 +148,6 @@
             </a>
         </div>
     </footer>
+
 </body>
 </html>

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Dune: Parte Dos",
+    "image": "/fotos/dune2x.jpg",
+    "description": "Paul Atreides une fuerzas con los Fremen para vengar a su familia y evitar el destino profético de convertirse en un tirano.",
+    "link": "https://www.cinesa.es/Peliculas/dune-parte-dos"
+  },
+  {
+    "title": "Godzilla x Kong: The New Empire",
+    "image": "/fotos/gozillakong.jpg",
+    "description": "Los titanes se enfrentan a una amenaza colosal que emerge del interior de la Tierra.",
+    "link": "https://www.cinesa.es/Peliculas/godzilla-x-kong-the-new-empire"
+  },
+  {
+    "title": "Deadpool & Wolverine",
+    "image": "/fotos/deadpoolwolverine.jpeg",
+    "description": "Deadpool vuelve... y no viene solo. Junto a Wolverine, forman un equipo explosivo del universo Marvel.",
+    "link": "https://www.cinesa.es/Peliculas/deadpool-wolverine"
+  },
+  {
+    "title": "Migration: Un Viaje Patoso",
+    "image": "/fotos/migration.jpeg",
+    "description": "Una familia de patos sale de su estanque en busca de aventuras más allá del hogar.",
+    "link": "https://www.cinesa.es/Peliculas/migration"
+  },
+  {
+    "title": "Inside Out 2",
+    "image": "/fotos/insideout.jpg",
+    "description": "Alegría, Tristeza, Ira y compañía regresan... y hay nuevas emociones en la mente de Riley adolescente.",
+    "link": "https://www.cinesa.es/Peliculas/inside-out-2"
+  },
+  {
+    "title": "Furiosa: A Mad Max Saga",
+    "image": "/fotos/furiosa.jpeg",
+    "description": "La historia del origen de Furiosa, antes de los acontecimientos de Mad Max: Fury Road.",
+    "link": "https://www.cinesa.es/Peliculas/furiosa"
+  }
+]

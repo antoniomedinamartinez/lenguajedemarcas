@@ -47,26 +47,7 @@
   <h2>Cartelera de Cinesa</h2>
   <p>Descubre las películas en cartelera en el cine de ParqueSur. Haz clic sobre el póster para ver más detalles.</p>
 
-  <div class="movie-grid">
-    <div class="movie" onclick="openModal(0)">
-      <img src="/fotos/dune2.jpg" alt="Dune 2" />
-    </div>
-    <div class="movie" onclick="openModal(1)">
-      <img src="/fotos/gozillakong.jpg" alt="Godzilla x Kong" />
-    </div>
-    <div class="movie" onclick="openModal(2)">
-      <img src="/fotos/deadpoolwolverine.jpeg" alt="Deadpool & Wolverine" />
-    </div>
-    <div class="movie" onclick="openModal(3)">
-      <img src="/fotos/migration.jpeg" alt="Migration" />
-    </div>
-    <div class="movie" onclick="openModal(4)">
-      <img src="/fotos/insideout.jpg" alt="Inside Out 2" />
-    </div>
-    <div class="movie" onclick="openModal(5)">
-      <img src="/fotos/furiosa.jpeg" alt="Furiosa" />
-    </div>
-  </div>
+  <div class="movie-grid" id="movieGrid"></div>
 </section>
 
 <!-- Modal -->
@@ -81,50 +62,14 @@
 </div>
 
 <script>
-  const movies = [
-    {
-      title: "Dune: Parte Dos",
-      image: "/fotos/dune2x.jpg",
-      description: "Paul Atreides une fuerzas con los Fremen para vengar a su familia y evitar el destino profético de convertirse en un tirano.",
-      link: "https://www.cinesa.es/Peliculas/dune-parte-dos"
-    },
-    {
-      title: "Godzilla x Kong: The New Empire",
-      image: "/fotos/gozillakong.jpg",
-      description: "Los titanes se enfrentan a una amenaza colosal que emerge del interior de la Tierra.",
-      link: "https://www.cinesa.es/Peliculas/godzilla-x-kong-the-new-empire"
-    },
-    {
-      title: "Deadpool & Wolverine",
-      image: "/fotos/deadpoolwolverine.jpeg",
-      description: "Deadpool vuelve... y no viene solo. Junto a Wolverine, forman un equipo explosivo del universo Marvel.",
-      link: "https://www.cinesa.es/Peliculas/deadpool-wolverine"
-    },
-    {
-      title: "Migration: Un Viaje Patoso",
-      image: "/fotos/migration.jpeg",
-      description: "Una familia de patos sale de su estanque en busca de aventuras más allá del hogar.",
-      link: "https://www.cinesa.es/Peliculas/migration"
-    },
-    {
-      title: "Inside Out 2",
-      image: "/fotos/insideout.jpg",
-      description: "Alegría, Tristeza, Ira y compañía regresan... y hay nuevas emociones en la mente de Riley adolescente.",
-      link: "https://www.cinesa.es/Peliculas/inside-out-2"
-    },
-    {
-      title: "Furiosa: A Mad Max Saga",
-      image: "/fotos/furiosa.jpeg",
-      description: "La historia del origen de Furiosa, antes de los acontecimientos de Mad Max: Fury Road.",
-      link: "https://www.cinesa.es/Peliculas/furiosa"
-    }
-  ];
+  let movies = [];
 
   function openModal(index) {
-    document.getElementById("modalImage").src = movies[index].image;
-    document.getElementById("modalTitle").textContent = movies[index].title;
-    document.getElementById("modalDescription").textContent = movies[index].description;
-    document.getElementById("modalLink").href = movies[index].link;
+    const movie = movies[index];
+    document.getElementById("modalImage").src = movie.image;
+    document.getElementById("modalTitle").textContent = movie.title;
+    document.getElementById("modalDescription").textContent = movie.description;
+    document.getElementById("modalLink").href = movie.link;
     document.getElementById("movieModal").style.display = "block";
   }
 
@@ -138,6 +83,29 @@
       modal.style.display = "none";
     }
   };
+
+  // Cargar películas desde JSON
+  fetch('peliculas.json')
+    .then(response => response.json())
+    .then(data => {
+      movies = data;
+      const grid = document.getElementById("movieGrid");
+      movies.forEach((movie, index) => {
+        const div = document.createElement("div");
+        div.className = "movie";
+        div.onclick = () => openModal(index);
+
+        const img = document.createElement("img");
+        img.src = movie.image;
+        img.alt = movie.title;
+
+        div.appendChild(img);
+        grid.appendChild(div);
+      });
+    })
+    .catch(error => {
+      console.error("Error cargando películas:", error);
+    });
 </script>
     
 

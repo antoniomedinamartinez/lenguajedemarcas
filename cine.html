@@ -50,7 +50,7 @@
   <div class="movie-grid" id="movieGrid"></div>
 </section>
 
-<!-- Modal -->
+
 <div id="movieModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
@@ -84,7 +84,7 @@
     }
   };
 
-  // Cargar películas desde JSON
+ 
   fetch('peliculas.json')
     .then(response => response.json())
     .then(data => {
@@ -124,4 +124,3 @@
     </footer>
 </body>
 </html>
-
